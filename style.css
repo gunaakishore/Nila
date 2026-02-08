@@ -9,6 +9,8 @@ body {
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
   background: white;
   padding: 30px;
   width: 90%;
@@ -89,3 +91,4 @@ img.loaded {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
