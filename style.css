@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ff4d6d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e63956;
+}
+
+/* 💓 Heartbeat */
+.heartbeat {
+  display: inline-block;
+  color: #d6336c;
+  animation: heartbeat 1.4s infinite;
+  font-weight: bold;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* 🌙 Images */
+img {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.memory-img,
+.final-img,
+.case-img {
+  width: 240px;
+  max-width: 90%;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 35px rgba(255,182,193,0.6);
+}
+
+/* Text */
+.poetic-text {
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.case-text {
+  font-style: italic;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
