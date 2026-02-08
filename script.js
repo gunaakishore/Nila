@@ -128,12 +128,19 @@ function finalQuestion() {
 /* MOVING NO BUTTON */
 function moveNoButton() {
   const noBtn = document.getElementById("noBtn");
-  if (!noBtn) return;
+  const card = document.querySelector(".card");
+  if (!noBtn || !card) return;
 
   noBtn.addEventListener("mouseover", () => {
+    const cardRect = card.getBoundingClientRect();
+    const btnRect = noBtn.getBoundingClientRect();
+
+    const maxX = cardRect.width - btnRect.width - 20;
+    const maxY = cardRect.height - btnRect.height - 20;
+
     noBtn.style.position = "absolute";
-    noBtn.style.left = Math.random() * 260 + "px";
-    noBtn.style.top = Math.random() * 260 + "px";
+    noBtn.style.left = Math.random() * maxX + "px";
+    noBtn.style.top = Math.random() * maxY + "px";
   });
 }
 
@@ -162,4 +169,5 @@ function yesAnswer() {
 
   enhanceImages();
 }
+
 
