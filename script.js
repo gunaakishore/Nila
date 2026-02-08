@@ -107,16 +107,6 @@ function finalQuestion() {
   document.getElementById("app").innerHTML = `
     <div class="card final-card">
 
-      <img
-        src="final-us.webp"
-        class="final-img"
-        loading="lazy"
-        decoding="async"
-        width="260"
-        height="360"
-        alt="Us"
-      >
-
       <h1>Will you marry me, Nila? 💍</h1>
       <p class="final-line">
         From that train on 31 May 2023,<br>
@@ -172,3 +162,4 @@ function yesAnswer() {
 
   enhanceImages();
 }
+
